@@ -1,38 +1,122 @@
-print("Galatix Universal V.0.1 Paid has loaded")
+print("Galatix Universal V.0.2 Paid has loaded")
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Galatix Universal Paid V.0.1", "BloodTheme")
 local Tab = Window:NewTab("Main")
 local MainSection = Tab:NewSection("Main")
-MainSection:NewSlider("Speed Slider", "Change your speed with this slider", 150, 16, function(s)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
-MainSection:NewSlider("JumpPower Slider", "Change your jumppower with this slider", 225, 50, function(s)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-end)
+
+
 MainSection:NewButton("FE Flip", "Makes you very athletic", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/BroSlimeDevGamerHD/BroSlimeDevGamerHD/main/FeFlip"))()
 end)
+
 MainSection:NewButton("Infinite Yield Loader", "Loads Infinite Yield Admin", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
+
+
 MainSection:NewButton("CMD-X Admin Loader", "Loads CMD-X Admin Commands", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))()
 end)
+
+
 local ShooterTab = Window:NewTab("Shooter Scripts")
-local AimbotSection = Tab:NewSection("Main")
+local AimbotSection = ShooterTab:NewSection("Main")
+
 
 MainSection:NewButton("Universal ESP", "Lets you see people through parts", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
 end)  
+
 MainSection:NewButton("Hitbox Expander", "Makes players hitboxes much larger", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/BroSlimeDevGamerHD/BroSlimeDevGamerHD/main/HitboxExpander'))()
 end)  
+
 AimbotSection:NewButton("Universal Aimbot (No FOV)", "Lock onto players without a FOV circle", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/Aimbot-Script/main/Aimbot%20Script%20(Without%20FOV).lua'))()
 end)  
+
 AimbotSection:NewButton("Universal Aimbot (FOV)", "Lock on to players with FOV circle", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/Aimbot-Script/main/Aimbot%20Script.lua'))()
 end)  
+
 AimbotSection:NewButton("Silent Aim", "Self Explanitory", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Averiias/Universal-SilentAim/main/main.lua'))()
 end)  
+
+
+-- LOCAL PLAYER
+local Player = Window:NewTab("Local Player")
+local PlayerSection = Player:NewSection("Player Config")
+
+PlayerSection:NewSlider("Speed Slider", "Change your speed with this slider", 150, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+PlayerSection:NewSlider("JumpPower Slider", "Change your jumppower with this slider", 225, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+PlayerSection:NewButton("FE Flip", "Makes you very athletic", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BroSlimeDevGamerHD/BroSlimeDevGamerHD/main/FeFlip"))()
+end)
+
+
+PlayerSection:NewButton("Reset WS/JP", "Reset Jumpppower and Walkspeed", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 16
+end)
+
+
+
+-- Other
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Main")
+
+
+OtherSection:NewToggle("SpinBot", "Makes you spin rapidly", function(state)
+    if state then
+        local speed = 50
+
+local plr = game:GetService("Players").LocalPlayer
+repeat task.wait() until plr.Character
+local humRoot = plr.Character:WaitForChild("HumanoidRootPart")
+plr.Character:WaitForChild("Humanoid").AutoRotate = false
+local velocity = Instance.new("AngularVelocity")
+velocity.Attachment0 = humRoot:WaitForChild("RootAttachment")
+velocity.MaxTorque = math.huge
+velocity.AngularVelocity = Vector3.new(0, speed, 0)
+velocity.Parent = humRoot
+velocity.Name = "Spinbot" 
+
+
+
+    else
+
+
+        local speed = 0
+
+local plr = game:GetService("Players").LocalPlayer
+repeat task.wait() until plr.Character
+local humRoot = plr.Character:WaitForChild("HumanoidRootPart")
+plr.Character:WaitForChild("Humanoid").AutoRotate = false
+local velocity = Instance.new("AngularVelocity")
+velocity.Attachment0 = humRoot:WaitForChild("RootAttachment")
+velocity.MaxTorque = math.huge
+velocity.AngularVelocity = Vector3.new(0, speed, 0)
+velocity.Parent = humRoot
+velocity.Name = "Spinbot" 
+    end
+end)
+
+OtherSection:NewButton("Chat Spoofer", "Used to impersonate other players", function()
+    loadstring(game:HttpGet("loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()"))()
+end)
+
+if game.Place.Id == 142823291
+
+local MurderMystery2 = Window:NewTab("Murder Mystery 2")
+local MM2Section = MurderMystery2:NewSection("Disruptance X)
+Section:NewButton("Disruptance X", "Used in Murder Mystery 2", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/scriptemt/CE-Technologies/main/script', true))()
+end)
