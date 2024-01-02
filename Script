@@ -1,0 +1,65 @@
+-- Lua Roblox Blade Ball Script, Made by zikaa_.
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Galatix Infinite: Blade Ball", "BloodTheme")
+
+-- MAIN
+local MainTab = Window:NewTab("Main")
+local MainSection = Tab:NewSection("Developer Script")
+MainSection:NewButton("Start Script", "Developer Script Now Loading", function()
+    print("put script here")
+end)
+-- MAIN CLASH
+local ClashSection = Tab:NewSection("Developer Clash Mode")
+ClashSection:NewToggle("Galatix Clash Mode", "Turn on when clashing", function(state)
+    if state then
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+
+local function simulateActions()
+    while true do
+
+        local screenSize = workspace.CurrentCamera.ViewportSize
+        local midX, midY = screenSize.X / 2, screenSize.Y / 2
+
+
+        humanoid:Move(Vector3.new(midX, midY, 0))
+        humanoid:Click()
+
+        userInputService.InputBegan:Fire({ KeyCode = Enum.KeyCode.F })
+
+        wait(0.00000000000001)
+    end
+end
+
+character:WaitForChild("Humanoid").StateChanged:Connect(function(newState)
+    if newState == Enum.HumanoidStateType.Physics then
+        simulateActions()
+
+    else
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+
+local function stopActions()
+    while true do
+
+        humanoid:Move(Vector3.new(0, 0, 0))
+
+
+        userInputService.InputEnded:Fire({ KeyCode = Enum.KeyCode.F })
+
+        wait(0.00000000000001)
+    end
+end
+
+
+character:WaitForChild("Humanoid").StateChanged:Connect(function(newState)
+    if newState == Enum.HumanoidStateType.Physics then
+        stopActions()
+    end
+end)
