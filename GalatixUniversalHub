@@ -1,6 +1,6 @@
-print("Galatix Universal Hub has loaded")
+print("Galatix Universal Hub V.0.1 has loaded")
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Galatix Universal Hub", "Midnight")
+local Window = Library.CreateLib("Galatix Universal Hub V.0.1", "Midnight")
 local Tab = Window:NewTab("Main")
 local MainSection = Tab:NewSection("Universal Player Customise")
 MainSection:NewToggle("Super-Human Toggle", "Makes you able to jump higher and walk faster", function(state)
