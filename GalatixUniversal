@@ -1,0 +1,38 @@
+print("Galatix Universal V.0.1 has loaded")
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Galatix Universal V.0.1", "Midnight")
+local Tab = Window:NewTab("Main")
+local MainSection = Tab:NewSection("Universal Player Customise")
+MainSection:NewToggle("Super-Human Toggle", "Makes you able to jump higher and walk faster", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.Walkspeed = 100
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    else
+        game.Players.LocalPlayer.Character.Humanoid.Walkspeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+MainSection:NewButton("FE Flip", "Makes you very athletic", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BroSlimeDevGamerHD/BroSlimeDevGamerHD/main/FeFlip"))()
+end)
+MainSection:NewButton("Infinite Yield Loader", "Loads Infinite Yield Admin", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+MainSection:NewButton("CMD-X Admin Loader", "Loads CMD-X Admin Commands", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))()
+end)
+MainSection:NewButton("CMD-X Admin Loader", "Loads CMD-X Admin Commands", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))()
+end)  
+MainSection:NewButton("Universal ESP", "Lets you see people through parts", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
+end)  
+MainSection:NewButton("Hitbox Expander", "Makes players hitboxes much larger", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/BroSlimeDevGamerHD/BroSlimeDevGamerHD/main/HitboxExpander'))()
+end)  
+MainSection:NewButton("Universal Aimbot (No FOV)", "Use in shooter games", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/Aimbot-Script/main/Aimbot%20Script%20(Without%20FOV).lua'))()
+end)  
+MainSection:NewButton("Universal Aimbot (FOV)", "Use in shooter games", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/Aimbot-Script/main/Aimbot%20Script%20(Without%20FOV).lua'))()
+end)  
