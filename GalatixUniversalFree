@@ -32,7 +32,4 @@ MainSection:NewButton("Hitbox Expander", "Makes players hitboxes much larger", f
 end)  
 MainSection:NewButton("Universal Aimbot (No FOV)", "Use in shooter games", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/Aimbot-Script/main/Aimbot%20Script%20(Without%20FOV).lua'))()
-end)  
-MainSection:NewButton("Universal Aimbot (FOV)", "Use in shooter games", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/Aimbot-Script/main/Aimbot%20Script%20(Without%20FOV).lua'))()
-end)  
+end)
