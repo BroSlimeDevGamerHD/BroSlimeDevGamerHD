@@ -1,6 +1,6 @@
-print("Galatix Universal V.0.2 Paid has loaded")
+print("Galatix Universal V.0.3 Paid has loaded")
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Galatix Universal Paid V.0.1", "BloodTheme")
+local Window = Library.CreateLib("Galatix Universal Paid V.0.3", "BloodTheme")
 local Tab = Window:NewTab("Main")
 local MainSection = Tab:NewSection("Main")
 
@@ -117,6 +117,32 @@ if game.Place.Id == 142823291
 
 local MurderMystery2 = Window:NewTab("Murder Mystery 2")
 local MM2Section = MurderMystery2:NewSection("Disruptance X)
-Section:NewButton("Disruptance X", "Used in Murder Mystery 2", function()
+MM2Section:NewButton("Disruptance X", "Used in Murder Mystery 2", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/scriptemt/CE-Technologies/main/script', true))()
+end)
+
+
+if game.Place.Id == 13772394625
+
+local BladeBall = Window:NewTab("Blade Ball")
+local BladeBallSection = BladeBall:NewSection("Blade Ball Scripts")
+BladeBallSection:NewButton("Bedol Hub", "Loads Bedol Hub", function()
+_G.UI_Size = 200 -- config ui size
+loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua"))()
+end)
+
+if game.Place.Id == 443406476
+
+local Lazarus = Window:NewTab("Project Lazarus")
+local LazarusSection = :Lazarus:NewSection("Lazarus Infinite Points")
+LazarusSection:NewButton("Infinite Points", "Gives infinite points at will", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/such/main/thefunni'))()
+end)
+
+if game.Place.Id == 2788229376
+
+local DaHood = Window:NewTab("DaHood")
+local DaHoodSection = :DaHood:NewSection("Loads a Da Hood Script")
+DaHoodSection:NewButton("DaHood SpaceYes Loader", "Loads DaHood Script", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SpaceYes/Lua/Main/DaHood.Lua'))()
 end)
