@@ -1,0 +1,70 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Player = game.Players.LocalPlayer
+
+
+local Window = OrionLib:MakeWindow({Name = "Galatix Universal Paid Beta V.0.1", HidePremium = false, SaveConfig = true, IntroEnabled = false})
+
+
+OrionLib:MakeNotification({
+	Name = "Logged in",
+	Content = "You have logged in as "..Player.Name.. ".",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+
+_G.Key = "GALATIXBETATESTERKEY7069"
+_G.KeyInput = "string"
+
+function MakeScriptHub()
+    print("Key has been Accepted")
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/BroSlimeDevGamerHD/BroSlimeDevGamerHD/main/GalatixUniversalPaid', true))()
+end
+
+function CorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "Now Close GUI",
+        Content = "Key has been confirmed",
+        Image = "rbxassetid://4483345998",
+        Time = 7.5
+    })
+end
+
+
+function IncorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "The key you've entered is INVALID",
+        Content = "INVALID KEY",
+        Image = "rbxassetid://4483345998",
+        Time = 3.5
+    })
+end
+
+local Tab = Window:MakeTab({
+	Name = "Beta Key",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})  
+Tab:AddTextbox({
+	Name = "Enter Paid Beta Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+        print(KeyInput)
+	end	  
+})
+
+
+Tab:AddButton({
+	Name = "Check Beta Key",
+	Callback = function()
+      		if _G.KeyInput then 
+                MakeScriptHub()
+                CorrectKeyNotification()
+            else
+                IncorrectKeyNotification()
+            end
+  	end    
+})
